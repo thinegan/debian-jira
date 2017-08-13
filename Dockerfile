@@ -1,8 +1,6 @@
 # Install Atlassian Jira in Debian Stretch (x64bit)
 # JIRA can't run on OpenJDK. You'll need to install Oracle Java.
 # This script will also install mysql-connector-java
-# Example to run docker :
-# docker run -v <path>/jira-home:/home/www/public_html/jira-data.crytera.com -d -p 8000:8080 debian-jiradata 
 FROM debian:stretch
 MAINTAINER Thinegan Ratnam <thinegan@thinegan.com>
 
