@@ -1,0 +1,13 @@
+#install4j response file for JIRA Software 7.4.1
+#Sun Jul 16 08:45:56 GMT 2017
+launch.application$Boolean=true
+rmiPort$Long=8005
+app.jiraHome=/home/www/public_html/jira-data.timeclone.com
+app.install.service$Boolean=true
+existingInstallationDir=/usr/local/JIRA Software
+sys.confirmedUpdateInstallationString=false
+sys.languageId=en
+sys.installationDir=/home/www/public_html/jira-install.timeclone.com
+executeLauncherAction$Boolean=true
+httpPort$Long=8080
+portChoice=default
