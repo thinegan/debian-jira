@@ -23,8 +23,15 @@ Dockerized jira service, built on top of official Debian images.
   * wget
   * xmlstarlet
 
-* host path : /home/www/public_html/jira-data.crytera.com
-* container path : /home/www/public_html/jira-data.crytera.com
+Docker-CLI:
+~~~~
+$ docker run -v /home/user/jira-data:/home/www/public_html/jira-data.server.com -d -p 8000:8080  --name jira thinegan/debian-jira:v7.4.2
+~~~~
+
+> Jira will be available at http://yourdockerhost:8000. Data will be persisted inside docker volume `jira-data`.
+
+* host path : /home/user/jira-data
+* container path : /home/www/public_html/jira-data.server.com
 
 * exposed port 8080
 * default command: jira start
