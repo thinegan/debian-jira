@@ -4,10 +4,13 @@ Dockerized jira service, built on top of official Debian images.
 # Image tags
 * thinegan/debian-jira (Debian GNU/Linux 9)
 
-# Installed packages
-* [latest (stretch/Dockerfile)]
+## Supported tags and respective Dockerfile links
 
-# Image specific:
+| Product |Version | Tags  | Dockerfile |
+|---------|--------|-------|------------|
+| Jira Software | 7.4.2 | v7.4.2, latest | [Dockerfile](https://github.com/thinegan/debian-jira/blob/master/Dockerfile) |
+
+# Installed packages
 * Oracle Java 8 
 * mysql-connector-java - v5.1.43
 * Atlassian Jira - v7.4.2
