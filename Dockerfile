@@ -1,6 +1,4 @@
 # Install Atlassian Jira in Debian Stretch (x64bit)
-# JIRA can't run on OpenJDK. You'll need to install Oracle Java.
-# This script will also install mysql-connector-java
 FROM debian:stretch
 MAINTAINER Thinegan Ratnam <thinegan@thinegan.com>
 
