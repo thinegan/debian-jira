@@ -36,5 +36,8 @@ $ docker run -v /home/user/jira-data:/home/www/public_html/jira-data.server.com 
 * exposed port 8080
 * default command: jira start
 
+# Example:
+![example-docker-jira](images/example-docker-jira.png)
+
 # Issues
 If you run into any problems with this image, please check (and potentially file new) issues on the [thinegan/debian-jira](https://github.com/thinegan/debian-jira) repo, which is the source for this image.
