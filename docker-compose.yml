@@ -1,0 +1,13 @@
+version: "2.1"
+# Example spin Jira Software container
+services:
+  jiraserver:
+    image: thinegan/debian-jira
+    container_name: jirasoftware
+    hostname: jiraserver
+    build: .
+    # Exposed to host machines
+    ports:
+      - "8000:8080"
+    volumes:
+      - ./jira-data:/home/www/public_html/jira-data.server.com
