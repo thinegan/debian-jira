@@ -5,8 +5,8 @@ MAINTAINER Thinegan Ratnam <thinegan@thinegan.com>
 # Environment Config
 ENV JIRA_HOME       /home/www/public_html/jira-data.server.com
 ENV JIRA_INSTALL    /home/www/public_html/jira-install.server.com
-ENV JIRA_VERSION    7.4.2
-ENV MYSQL_CON_JAVA  5.1.43
+ENV JIRA_VERSION    7.5.0
+ENV MYSQL_CON_JAVA  5.1.44
 ENV DEBIAN_FRONTEND noninteractive
 ENV JAVA_HOME       /usr/lib/jvm/java-8-oracle
 ENV WORKDIR         /home/www/public_html
