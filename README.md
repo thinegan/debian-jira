@@ -5,13 +5,14 @@ Dockerized jira service, built on top of official Debian images.
 
 | Product |Version | Tags  | Dockerfile |
 |---------|--------|-------|------------|
-| Jira Software | 7.4.2 | v7.4.2, latest | [Dockerfile](https://github.com/thinegan/debian-jira/blob/master/Dockerfile) |
+| Jira Software | 7.5.0 | v7.5.0, latest | [Dockerfile](https://github.com/thinegan/debian-jira/blob/master/Dockerfile) |
+| Jira Software | 7.4.2 | v7.4.2 | [Dockerfile](https://github.com/thinegan/debian-jira/blob/master/Dockerfile) |
 
 # Installed packages
 * Debian GNU/Linux 9 (Stretch) x64bit
 * Oracle Java 8 
-* mysql-connector-java - v5.1.43
-* Atlassian Jira - v7.4.2
+* mysql-connector-java
+* Atlassian Jira
 
 # Config:
 * Dependencies Package:
@@ -32,7 +33,7 @@ $ docker-compose pull && docker-compose up -d
 ```console
 $ docker run -d -p 8000:8080 \
 -v /home/user/jira-data:/home/www/public_html/jira-data.server.com \
---name jira thinegan/debian-jira:v7.4.2
+--name jira thinegan/debian-jira:v7.5.0
 ```
 
 # More Info:
