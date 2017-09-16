@@ -1,5 +1,6 @@
 # debian-jira
 Dockerized jira service, built on top of official Debian images.
+Min 2GB Ram, 10GB Disk Size
 
 ## Supported tags and respective Dockerfile links
 
