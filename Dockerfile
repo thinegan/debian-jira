@@ -41,6 +41,11 @@ RUN \
   chmod +x atlassian-jira-software-${JIRA_VERSION}-x64.bin && \
   /bin/bash atlassian-jira-software-${JIRA_VERSION}-x64.bin -q -varfile response.varfile
 
+# Configure Jira Memory (Min 1GB RAM)
+RUN \
+  sed -i 's/384m/512m/g' ${JIRA_INSTALL}/bin/setenv.sh  && \
+  sed -i 's/768m/1024m/g' ${JIRA_INSTALL}/bin/setenv.sh
+
 # Install Mysql Connector Java
 RUN \
   wget "https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-${MYSQL_CON_JAVA}.tar.gz" && \
