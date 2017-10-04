@@ -43,8 +43,8 @@ RUN \
 
 # Configure Jira Memory (Min 1GB RAM)
 RUN \
-  sed -i 's/384m/1024m/g' ${JIRA_INSTALL}/bin/setenv.sh  && \
-  sed -i 's/768m/2048m/g' ${JIRA_INSTALL}/bin/setenv.sh && \
+  sed -i 's/384m/512m/g' ${JIRA_INSTALL}/bin/setenv.sh  && \
+  sed -i 's/768m/1024m/g' ${JIRA_INSTALL}/bin/setenv.sh && \
   #sed -i 's/connectionTimeout="20000"/connectionTimeout="20000" scheme="https" proxyPort="443"/g' ${JIRA_INSTALL}/conf/server.xml
 
 # Install Mysql Connector Java
@@ -60,6 +60,8 @@ RUN \
 
 # Post Install & Cleanup
 RUN \
+  chmod +x -R ${JIRA_INSTALL} && \
+  chmod +x -R ${JIRA_HOME} && \
   chown -R ${JIRA_USER}:${JIRA_GROUP} ${JIRA_INSTALL} && \
   chown -R ${JIRA_USER}:${JIRA_GROUP} ${JIRA_HOME} && \
   rm -rf ${WORKDIR}/atlassian-jira-software-${JIRA_VERSION}-x64.bin
