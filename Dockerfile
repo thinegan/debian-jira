@@ -44,7 +44,7 @@ RUN \
 # Configure Jira Memory (Min 1GB RAM)
 RUN \
   sed -i 's/384m/512m/g' ${JIRA_INSTALL}/bin/setenv.sh  && \
-  sed -i 's/768m/1024m/g' ${JIRA_INSTALL}/bin/setenv.sh
+  sed -i 's/768m/1024m/g' ${JIRA_INSTALL}/bin/setenv.sh && \
   sed -i 's/connectionTimeout="20000"/connectionTimeout="20000" scheme="https" proxyName="dev-jira.crytera.com" proxyPort="443"/g' ${JIRA_INSTALL}/conf/server.xml
 
 # Install Mysql Connector Java
