@@ -41,6 +41,10 @@ RUN \
   chmod +x atlassian-jira-software-${JIRA_VERSION}-x64.bin && \
   /bin/bash atlassian-jira-software-${JIRA_VERSION}-x64.bin -q -varfile response.varfile
 
+COPY docker-entrypoint.sh /
+ENTRYPOINT ["/docker-entrypoint.sh"]
+RUN chmod +x /docker-entrypoint.sh
+
 # Configure Jira Memory (Min 1GB RAM)
 RUN \
   sed -i 's/384m/768m/g' ${JIRA_INSTALL}/bin/setenv.sh  && \
