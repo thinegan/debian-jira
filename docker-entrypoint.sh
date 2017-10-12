@@ -11,8 +11,7 @@ if [ "$(stat --format "%Y" "${JIRA_INSTALL}/conf/server.xml")" -eq "0" ]; then
 
     if [ -n "${JIRASERVERNAME}" ]; then
         echo "Updating '$JIRASERVERNAME' as connector proxyName"
-        sed -i 's/connectionTimeout="20000"/connectionTimeout="20000" scheme="https" proxyName="${JIRASERVERNAME}" proxyPort="443"/g' ${JIRA_INSTALL}/conf/server.xml
-        # xmlstarlet ed --inplace --pf --ps --insert '//Connector[@port="8080"]' --type "attr" --name "proxyName" --value "${JIRASERVERNAME}" "${JIRA_INSTALL}/conf/server.xml"
+        sed -i 's/connectionTimeout="20000"/connectionTimeout="20000" scheme="https" proxyName="'${JIRASERVERNAME}'" proxyPort="443"/g' ${JIRA_INSTALL}/conf/server.xml
     fi
 else
     echo "Skipping modification of ${JIRA_INSTALL}/conf/server.xml as it was already modified after initial Docker image creation"
