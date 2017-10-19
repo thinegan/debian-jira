@@ -5,7 +5,7 @@ MAINTAINER Thinegan Ratnam <thinegan@thinegan.com>
 # Environment Config
 ENV JIRA_HOME       /home/www/public_html/jira-data.server.com
 ENV JIRA_INSTALL    /home/www/public_html/jira-install.server.com
-ENV JIRA_VERSION    7.5.0
+ENV JIRA_VERSION    7.5.1
 ENV MYSQL_CON_JAVA  5.1.44
 ENV DEBIAN_FRONTEND noninteractive
 ENV JAVA_HOME       /usr/lib/jvm/java-8-oracle
@@ -49,8 +49,6 @@ RUN chmod +x /docker-entrypoint.sh
 RUN \
   sed -i 's/384m/768m/g' ${JIRA_INSTALL}/bin/setenv.sh  && \
   sed -i 's/768m/1024m/g' ${JIRA_INSTALL}/bin/setenv.sh
-  # sed -i 's/768m/1024m/g' ${JIRA_INSTALL}/bin/setenv.sh && \
-  # sed -i 's/connectionTimeout="20000"/connectionTimeout="20000" scheme="https" proxyName="${JIRASERVERNAME}" proxyPort="443"/g' ${JIRA_INSTALL}/conf/server.xml
 
 # Install Mysql Connector Java
 RUN \
