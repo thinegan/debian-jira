@@ -6,7 +6,7 @@ Min 2GB Ram, 10GB Disk Size
 
 | Product |Version | Tags  | Dockerfile |
 |---------|--------|-------|------------|
-| Jira Software | 7.5.0 | v7.5.1, latest | [Dockerfile](https://github.com/thinegan/debian-jira/blob/master/Dockerfile) |
+| Jira Software | 7.5.1 | v7.5.1, latest | [Dockerfile](https://github.com/thinegan/debian-jira/blob/master/Dockerfile) |
 | Jira Software | 7.5.0 | v7.5.0 | [Dockerfile](https://github.com/thinegan/debian-jira/blob/master/Dockerfile) |
 | Jira Software | 7.4.2 | v7.4.2 | [Dockerfile](https://github.com/thinegan/debian-jira/blob/master/Dockerfile) |
 
